@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { services } from '../../data/services';
+
+export function getStaticPaths() {
+  return [
+    {params: {service: 'general-dentistry'}, props: {serviceData: services[0]}},
+    {params: {service: 'cosmetic-dentistry'}, props: {serviceData: services[1]}},
+    {params: {service: 'emergency-care'}, props: {serviceData: services[2]}},
+    {params: {service: 'orthodontics'}, props: {serviceData: services[3]}},
+  ];
+}
+
+const { serviceData } = Astro.props;
+---
+
+<Layout title={serviceData.title}>
+  <div class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <div class="flex items-center mb-8">
+          <span class="text-6xl mr-6">{serviceData.icon}</span>
+          <div>
+            <h1 class="text-4xl font-bold mb-2">{serviceData.title}</h1>
+            <p class="text-xl text-gray-600">{serviceData.description}</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold mb-6">Our Services Include:</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            {serviceData.details.map(detail => (
+              <div class="flex items-start">
+                <span class="text-primary mr-3">✓</span>
+                <p class="text-gray-600">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Schedule an Appointment</h2>
+          <p class="text-gray-600 mb-6">
+            Ready to transform your smile? Contact us today to schedule your consultation.
+          </p>
+          <a 
+            href="/contact" 
+            class="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
+          >
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

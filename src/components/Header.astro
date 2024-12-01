@@ -1,0 +1,38 @@
+---
+const services = [
+  { title: 'General Dentistry', path: '/services/general-dentistry' },
+  { title: 'Cosmetic Dentistry', path: '/services/cosmetic-dentistry' },
+  { title: 'Emergency Care', path: '/services/emergency-care' },
+  { title: 'Orthodontics', path: '/services/orthodontics' },
+];
+---
+<header class="shadow-sm fixed w-full top-0 z-50 bg-[#e8cecc]">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="/" class="text-2xl font-bold text-primary">DENTAL133</a>
+    </div>
+    <div class="hidden md:flex space-x-8">
+      <a href="/" class="hover:text-primary">Home</a>
+      <div class="relative group">
+        <button class="hover:text-primary">
+          Services
+          <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+          <div class="py-1">
+            {services.map(service => (
+              <a href={service.path} class="block px-4 py-2 text-sm hover:bg-gray-100">
+                {service.title}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <a href="/about" class="hover:text-primary">About</a>
+      <a href="/contact" class="hover:text-primary">Contact</a>
+    </div>
+  </nav>
+</header>
+<div class="h-20"></div> <!-- Spacer for fixed header -->
