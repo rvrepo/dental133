@@ -1,25 +1,24 @@
 ---
 import heroVideo from '../assets/dental-hero.mp4';
+import ReviewsCarousel from './ReviewsCarousel.astro';
+import BookAppointment from './BookAppointment.astro';
+import AboutUs from './AboutUs.astro';
 ---
-<section class="relative min-h-[80vh] flex items-center">
+<section class="relative min-h-[80vh] flex items-center bg-[#1FA198]">
   <div class="absolute inset-0 z-0">
-  <video autoplay loop muted playsinline class="w-full h-full object-cover">
-    <source src={heroVideo} type="video/mp4" />
+    <video autoplay loop muted playsinline class="w-full h-full object-cover">
+      <source src={heroVideo} type="video/mp4" />
+    </video>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-primary">
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
     <div class="max-w-3xl">
       <div class="bg-zinc-50/70 rounded-full p-8 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold m-6 leading-tight">Your Perfect Smile Starts Here</h1>
-        <p class="text-xl m-8">Experience world-class dental care with our team of experienced professionals using cutting-edge technology.</p>
-    </div>
-      <div class="flex gap-4">
-        <!-- <a href="/contact" class="bg-secondary text-primary px-8 py-3 rounded-full font-semibold hover:bg-secondary-light transition-colors">
-          Book Appointment
-        </a>
-        <a href="/services" class="border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
-          Our Services
-        </a> -->
+        <ReviewsCarousel />
       </div>
     </div>
   </div>
 </section>
+
+<BookAppointment />
+<AboutUs />
+<BookAppointment />

@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import { services } from '../data/services';
+import reviews from '../data/reviews.json';
+const services = reviews.reviews;
 ---
 
 <Layout title="Our Services">
@@ -13,16 +13,11 @@ import { services } from '../data/services';
         {services.map(service => (
           <div class="bg-white p-8 rounded-lg shadow-md">
             <div class="flex items-center mb-6">
-              <span class="text-4xl mr-4">{service.icon}</span>
-              <h2 class="text-2xl font-bold">{service.title}</h2>
+              <span class="text-4xl mr-4">☆</span>
+              <h2 class="text-2xl font-bold">{service.name}</h2>
             </div>
-            <p class="text-gray-600 mb-6">{service.description}</p>
-            <h3 class="text-lg font-semibold mb-4">What We Offer:</h3>
-            <ul class="list-disc list-inside space-y-2 text-gray-600">
-              {service.details.map(detail => (
-                <li>{detail}</li>
-              ))}
-            </ul>
+            <p class="text-gray-600 mb-6">{service.content}</p>
+            <h3 class="text-lg font-semibold mb-4">Rating: {service.rating}</h3>
           </div>
         ))}
       </div>

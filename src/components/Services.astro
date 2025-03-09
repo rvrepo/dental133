@@ -1,26 +1,32 @@
 ---
-import { services } from '../data/services';
-import ServiceCard from './ServiceCard.astro';
+const services = [
+  "Smile Designing",
+  "Tooth coloured filling",
+  "Root Canal treatment",
+  "Crowns and Bridges",
+  "Clear Aligners",
+  "Implants",
+  "Braces",
+  "Scaling"
+];
 ---
-<section class="py-16">
+<section id="services" class="py-16 bg-[#1FA198] scroll-mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold mb-4">Our Services</h2>
-      <p class="text-gray-600 max-w-2xl mx-auto">
-        We offer a comprehensive range of dental services to meet all your oral health needs.
-        From routine check-ups to advanced procedures, our experienced team is here to help.
-      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">Our Services</h2>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {services.map(service => (
-        <ServiceCard
-          title={service.title}
-          description={service.description}
-          image={service.image}
-          id={service.id}
-        />
-      ))}
+    <div class="max-w-3xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map(service => (
+          <div class="flex items-center gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-lg text-white">{service}</span>
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </section>

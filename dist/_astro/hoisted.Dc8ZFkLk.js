@@ -1,0 +1,1 @@
+const n=document.getElementById("mobile-menu-button"),e=document.getElementById("mobile-menu");n?.addEventListener("click",()=>{e?.classList.toggle("hidden")});const l=e?.querySelectorAll("a");l?.forEach(t=>{t.addEventListener("click",()=>{e?.classList.add("hidden")})});

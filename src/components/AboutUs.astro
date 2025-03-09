@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import doctorImage from '../assets/doctor.jpg';
+---
+
+<section id="about" class="py-16 bg-[#1FA198] scroll-mt-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12">About Us</h2>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="order-2 md:order-1">
+        <p class="leading-relaxed text-white">
+          Welcome to Dental One33, where our motto is Precision and Compassion
+        </p>
+        <p class="leading-relaxed mt-4 text-white">
+          At <strong>Dental One33</strong>, we believe that a healthy smile is a gateway to confidence, well-being, and a better quality of life. Located in the Jaypee Wishtown, Sector 133, Noida, our state-of-the-art dental clinic is committed to delivering world-class oral healthcare with a personalized touch. Whether you need preventive care, cosmetic enhancement, or complex restorative treatments, our team of highly skilled dentists is here to ensure you receive the best care possible.
+        </p>
+        <p class="leading-relaxed mt-4 text-white">
+          <strong><i>Who we are</i></strong>
+        </p>
+        <p class="leading-relaxed mt-4 text-white">
+          Dental One33 is a premier dental clinic dedicated to providing cutting-edge dental solutions in a warm and comfortable environment. Our team comprises experienced and compassionate dental professionals who prioritize your oral health and overall well-being. With a patient-centric approach, we strive to create a stress-free experience while delivering top-quality dental care.
+Our clinic is equipped with the latest technology and adheres to the highest standards of hygiene and safety. From routine check-ups to advanced dental procedures, we offer comprehensive treatments tailored to meet the unique needs of each patient. At Dental One33, you’re not just a patient; you’re part of our family, and we are committed to helping you achieve a radiant and healthy smile.
+        </p>
+        <p class="leading-relaxed mt-4 text-white">
+          You can read more about what patients have to say on the google reviews page <a href="https://www.google.com/search?sca_esv=1c73104e47d869c4&rlz=1C1CHBF_enIN914IN914&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2KzVEf8m6Mg5fBcvw9-H9w7RHzdFWB6G935RF0nZCDrIAd0AHhMUGs0pA4HEkfBE_p_Lri6Hlqr7V9PlA_ZAg7qu2d9HQI&q=Dental+One33+Reviews&sa=X&ved=2ahUKEwjBgtjYr-uLAxXGZmwGHcwINfMQ0bkNegQIGxAD&biw=1536&bih=730&dpr=1.25" target="_blank"><u>here</u></a>.
+        </p>
+      </div>
+      <div class="order-1 md:order-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/10 rounded-lg transform rotate-3"></div>
+          <Image
+            src={doctorImage}
+            alt="Dr. Sakshi Jain"
+            class="relative rounded-lg shadow-lg w-full max-w-md mx-auto"
+            width={500}
+            height={600}
+          />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="order-2 md:order-1">
+        <p class="leading-relaxed text-white">
+          <strong>Who We Are</strong>
+        </p>
+        <p class="leading-relaxed text-white">
+          
+        </p>
+      </div>
+      <div class="order-2 md:order-1">
+        <p class="leading-relaxed text-white">
+          <strong>Our Mission</strong>
+        </p>
+        <p class="leading-relaxed text-white">
+          Our mission at Dental One33 is simple – to provide exceptional dental care with integrity, precision, compassion, and excellence. We aim to enhance the oral health of our community by offering innovative, painless, and cost-effective dental treatments. We take pride in educating our patients about proper oral hygiene while ensuring that every visit to our clinic is a positive and empowering experience.
+        </p>
+      </div>
+    </div> -->
+  </div>
+</section>
