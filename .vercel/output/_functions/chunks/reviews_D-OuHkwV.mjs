@@ -1,0 +1,6 @@
+const reviews = [{"id":1,"name":"Laltesh","rating":5,"content":"Dr. Sakshi Jain is a very good and experienced doctor. Special attention is given to cleanliness and convenience."},{"id":2,"name":"Shivani","rating":5,"content":"Dr Sakshi is a very experienced dentist who took time to understand my issues when I was visiting Noida."},{"id":3,"name":"Anupriya","rating":5,"content":"Exceptional experience! The doctor's diagnosis was accurate and thorough. Her bedside manner is outstanding - warm, empathetic, and clear. Highly recommended!"},{"id":4,"name":"Jigyasa","rating":5,"content":"I have taken regular treatment from Dr Sakshi in past few years and my experience has been amazing. She is very thorough in her analysis. Provides good insights about the various procedures available. Her new clinic is extremely good, highly recommended."},{"id":5,"name":"Dinesh","rating":5,"content":"Dr Sakshi having good skill and experiance of her job.She having good knoledge of advance modern dentisry. Her diegnosis is accurate. She is calm and cool in nature. Clinic is very clean and having all the faciliy required.Treatment charges is very reasonable in compare to market."}];
+const reviews$1 = {
+  reviews,
+};
+
+export { reviews$1 as r };
